@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#00574B</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrey">#A7A7A9</color>
+    <color name="colorLightGrey">#F0F0F0</color>
+    <color name="grey_">#808080</color>
+    <color name="grey_light">#DCDCDC</color>
+
+    <color name="colorBlue">#26AADA</color>
+    <color name="colorOrange">#FF9933</color>
+    <color name="squadOrange">#F5811A</color>
+    <color name="squadin">#4CBFFF</color>
+
+    <color name="squadout">#4CBFFF</color>
+
+    <color name="colorGreen">#2DB5A9</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="action_bar">#1f2649</color>
+    <color name="golden">#fff5b5</color>
+    <color name="ColorFileImageBg">#23AAE3</color>
+    <color name="btn_blue">#95D7F1</color>
+    <color name="btn_green">#7FD4CD</color>
+    <color name="color_red">#DC143C</color>
+    <color name="color_black">#000</color>
+
+    <color name="color_skin">#ecbcb4</color>
+
+
+    <color name="color_yellow">#FFFF00</color>
+    <color name="color_green">#7FFF00</color>
+
+    <color name="color_purple">#800080</color>
+    <color name="color_pink">#FFC0CB</color>
+    <color name="color_brown">#A74B00</color>
+    <color name="transparent">#80FFFFFF</color>
+
+
+
+</resources>

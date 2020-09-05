@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.UpdateMatchActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_chat_page"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/colorWhite"
+        tools:context=".activity.UpdateMatchActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        >
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:src="@drawable/goal_temp"
+                    android:scaleType="fitXY"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:id="@+id/tv_label_stadium_name"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/ic_location_on_black_18dp_old"
+                        android:drawableLeft="@drawable/ic_location_on_black_18dp_old"
+                        android:drawablePadding="10dp"
+                        android:text="Location"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/spinner_location_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/spinner_location_name" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:id="@+id/spinner_location_name"
+                        android:layout_height="wrap_content"
+                        android:drawSelectorOnTop="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_stadium_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_location_name" />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_label_location"
+                        android:layout_weight="1.28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/ic_location_on_black_18dp_old"
+                        android:drawableLeft="@drawable/ic_location_on_black_18dp_old"
+                        android:drawablePadding="10dp"
+
+                        android:text="@string/str_address"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_weight="1.72"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:paddingLeft="5dp"
+                        android:textColor="@android:color/black"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_stadium_name"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_label_date"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/ic_date_range_black_18dp_old"
+                        android:drawableLeft="@drawable/ic_date_range_black_18dp_old"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_date"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_date"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_date"
+                        />
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:textColor="@android:color/black"
+                        android:hint="Select Date"
+                        android:paddingLeft="5dp"
+                        android:textColorHint="@android:color/black"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_location"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_label_kickoff"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/kickoff_icon_new"
+                        android:drawableLeft="@drawable/kickoff_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_kickoff"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/spinner_kickoff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/spinner_kickoff"
+                        />
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinner_kickoff"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/colorWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_date"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_kickoff"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_kickoff" />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_game_type"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/side_icon_new"
+                        android:drawableLeft="@drawable/side_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="Game Type"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/spinner_game_type"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/spinner_game_type"
+
+                        />
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinner_game_type"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawSelectorOnTop="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_kickoff"
+                        />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_game_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_game_type" />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_day_night"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/day_night_icon_new"
+                        android:drawableLeft="@drawable/day_night_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_day_night"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_day_night"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_day_night"
+                        />
+                    <TextView
+                        android:id="@+id/tv_day_night"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:hint="-"
+                        android:paddingLeft="5dp"
+                        android:textColorHint="@android:color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_game_type"
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <View
+                    android:id="@+id/view_day_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_day_night"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_pitch_no"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:drawablePadding="12dp"
+                        android:drawableStart="@drawable/pitch_no_icon_new"
+                        android:drawableLeft="@drawable/pitch_no_icon_new"
+                        android:text="@string/str_pitch_no"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/linearlayout_pitch_number"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearlayout_pitch_number"
+                        />
+                    <LinearLayout
+                        android:id="@+id/linearlayout_pitch_number"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_day_night"
+                        >
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_pitch_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawSelectorOnTop="true"
+                            android:visibility="gone"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_label_pitch_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:visibility="visible"
+                            android:paddingLeft="5dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:id="@+id/view_pitch_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_pitch_number" />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_side"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/side_icon_new"
+                        android:drawableLeft="@drawable/side_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_a_side"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/spinner_a_side"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/spinner_a_side"
+                        />
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinner_a_side"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawSelectorOnTop="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_pitch_no"
+                        />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_side"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_a_side" />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_truf"
+                        android:layout_weight="1.28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/turf_icon_new"
+                        android:drawableLeft="@drawable/turf_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_truf"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_truf"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_truf"
+                        />
+                    <TextView
+                        android:id="@+id/tv_truf"
+                        android:layout_weight="1.72"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@android:color/black"
+                        android:hint="-"
+                        android:paddingLeft="5dp"
+                        android:textColorHint="@android:color/black"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_side"
+                        />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_truf"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_truf" />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_boots"
+                        android:layout_weight="1.28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/boots_icon_new"
+                        android:drawableLeft="@drawable/boots_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_boots"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_boots"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_boots"
+                        />
+                    <TextView
+                        android:id="@+id/tv_boots"
+                        android:layout_weight="1.72"
+                        android:layout_width="0dp"
+                        android:paddingLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@android:color/black"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_boots"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_boots" />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_condition"
+                        android:layout_weight="1.28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:drawableStart="@drawable/condition_icon_new"
+                        android:drawableLeft="@drawable/condition_icon_new"
+                        android:drawablePadding="10dp"
+                        android:text="@string/str_conditions"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_condition"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_condition"
+                        />
+                    <TextView
+                        android:id="@+id/tv_condition"
+                        android:layout_weight="1.72"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@android:color/black"
+                        android:hint="-"
+                        android:paddingLeft="5dp"
+                        android:textColorHint="@android:color/black"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_boots"
+                        />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_condition" />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_cost"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Cost"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ed_cost"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ed_cost" />
+                    <TextView
+                        android:id="@+id/cost_sym"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="18dp"
+                        android:text="£"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/ed_cost"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:inputType="numberDecimal"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:hint="Cost per player"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cost_sym"
+                        app:layout_constraintTop_toBottomOf="@+id/view_conditions" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_cost"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:id="@+id/tv_label_match_type"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Recurring Type"
+                        android:textSize="16sp"
+                        android:gravity="left|center"
+                        app:layout_constraintTop_toTopOf="@+id/spinner_recurring_game"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/spinner_recurring_game"
+                        />
+
+                    <RelativeLayout
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_recurring_game"
+                            android:gravity="start"
+                            />
+                        <Spinner
+                            android:id="@+id/spinner_match"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:visibility="gone"
+                            android:layout_below="@+id/spinner_recurring_game"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_match"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_match"
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_facilities"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Facilities"
+                        android:textSize="16sp"
+                        android:gravity="left|center"
+                        app:layout_constraintTop_toTopOf="@+id/tv_facilities"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_facilities" />
+                    <TextView
+                        android:id="@+id/tv_facilities"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_match"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/view_facilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_facilities"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_restriction"
+                        android:layout_weight="1.28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Restrictions"
+                        android:gravity="left|center"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/tv_restriction"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_restriction" />
+
+                    <TextView
+                        android:id="@+id/tv_restriction"
+                        android:layout_weight="1.72"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:paddingLeft="5dp"
+
+                        android:textColor="@android:color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_facilities" />
+                </LinearLayout>
+
+
+
+                <View
+                    android:id="@+id/view_restrictions"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_restriction"
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_kit"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Kits"
+                        android:gravity="left|center"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/linearlayout_kit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearlayout_kit" />
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_kit"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:weightSum="2"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:paddingLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_restrictions">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Team 1"
+                                android:textColor="#000" />
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/spinner_team_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawSelectorOnTop="true"
+                                android:entries="@array/team_1"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Team 2"
+                                android:textColor="#000" />
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/spinner_team_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawSelectorOnTop="true"
+                                android:entries="@array/team_2"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_kit"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_kit"
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_referee"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Referee"
+                        android:gravity="left|center"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/spinner_referee"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/spinner_referee" />
+                    <Spinner
+                        android:id="@+id/spinner_referee"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_kit" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_referee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_referee"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_note"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:drawablePadding="15dp"
+                        android:drawableStart="@drawable/cost_icon_18"
+                        android:drawableLeft="@drawable/cost_icon_18"
+                        android:text="Note"
+                        android:gravity="left|center"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="@+id/ed_note"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/ed_note"
+                        />
+                    <EditText
+                        android:id="@+id/ed_note"
+                        android:layout_weight="1.75"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@android:color/black"
+                        android:hint="e.g: Note"
+                        android:paddingLeft="5dp"
+                        android:textSize="14sp"
+                        android:background="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_match_type"
+                        app:layout_constraintTop_toBottomOf="@+id/view_referee" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_add_match"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Create Match"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_note"
+                    />
+                <!---->
+
+                <View
+                    android:id="@+id/fucused"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
+
+
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/default_wallpaper"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChatPageActivity$PlaceholderFragment">
+
+    <!--<TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />-->
+
+ <!--starts from here-->
+    <!--<include-->
+            <!--layout="@layout/message_place"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:gravity="bottom" />-->
+    <!--</LinearLayout>-->
+
+<!--below in commented june 24-->
+    <ListView
+        android:id="@+id/chatsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/input_msg"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:clipToPadding="false"
+        android:paddingTop="5dp"
+        android:divider="@null"
+        app:layout_constraintBottom_toTopOf="@+id/input_msg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_chat_sent_message"
+        />
+
+    <LinearLayout
+        android:id="@id/input_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toLeftOf="@+id/floatingButton"
+        android:background="@drawable/rect_round"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/floatingButton"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--android:background="@drawable/chat_edit_text_border"-->
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="142dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="textCapSentences"
+            android:hint="Type a Message"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            />
+
+        <!--android:background="@drawable/circle_image_file_upload"-->
+        <ImageButton
+            android:id="@+id/attach_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:padding="2dp"
+            android:visibility="visible"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ib_attach_new" />
+
+        <ImageButton
+            android:id="@+id/attach_recording"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:padding="2dp"
+            android:visibility="visible"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_keyboard_voice_black_24dp" />
+
+    </LinearLayout>
+    <com.firmground.evs.firmground.circle_image.CircleImageView
+        android:id="@id/floatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginRight="6dp"
+        android:layout_below="@+id/chatsListView"
+        android:background="@drawable/circle_border_base_green"
+        app:layout_constraintBottom_toBottomOf="@+id/input_msg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/enter_new" />
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+    <!--<LinearLayout -->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<ScrollView-->
+    <!--android:id="@+id/scrollView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="20">-->
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/layout2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layout1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"></LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <!--</ScrollView>-->

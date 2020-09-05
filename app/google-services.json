@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "769285475548",
+    "firebase_url": "https://firmgroundnotification.firebaseio.com",
+    "project_id": "firmgroundnotification",
+    "storage_bucket": "firmgroundnotification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769285475548:android:20d75f218ad6f4d6807819",
+        "android_client_info": {
+          "package_name": "com.firmground.evs.firmground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769285475548-0fi5nhju5gpou7ktu9njbpp3d73f902g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt7wM2HhF5pfLPruzKfaL9tlQD9isnB-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769285475548-0fi5nhju5gpou7ktu9njbpp3d73f902g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

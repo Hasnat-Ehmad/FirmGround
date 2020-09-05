@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".activity.SignupActivity">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_simple" />
+            <!--<android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:titleTextColor="@android:color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <EditText
+            android:id="@+id/ed_first_name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="First Name"
+            android:paddingTop="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:background="@drawable/line"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ed_date_of_birth"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+
+        <EditText
+            android:id="@+id/ed_last_name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Last Name"
+            android:paddingTop="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:background="@drawable/line"
+
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ed_date_of_birth"
+            app:layout_constraintTop_toBottomOf="@+id/ed_first_name" />
+
+
+        <EditText
+            android:id="@+id/ed_date_of_birth"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="10dp"
+            android:focusable="false"
+            android:hint="Date of Birth"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_date_range_black_18dp_old"
+            android:drawableLeft="@drawable/ic_date_range_black_18dp_old"
+            android:background="@drawable/line"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_last_name" />
+
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:hint="E-mail"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="10dp"
+            android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+            android:background="@drawable/line"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/ed_date_of_birth"
+            app:layout_constraintStart_toStartOf="@+id/ed_date_of_birth"
+            app:layout_constraintTop_toBottomOf="@+id/ed_date_of_birth" />
+
+
+        <EditText
+            android:id="@+id/ed_contact"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:hint="Phone"
+            android:background="@drawable/line"
+            android:paddingTop="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+            android:drawableStart="@drawable/ic_local_phone_black_24dp"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/ed_email"
+            app:layout_constraintStart_toStartOf="@+id/ed_email"
+            app:layout_constraintTop_toBottomOf="@+id/ed_email" />
+
+
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="8dp"
+            android:paddingTop="10dp"
+            android:hint="Password"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_lock_colored_24dp"
+            android:drawableLeft="@drawable/ic_lock_colored_24dp"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/ed_contact"
+            app:layout_constraintStart_toStartOf="@+id/ed_contact"
+            app:layout_constraintTop_toBottomOf="@+id/ed_contact" />
+
+
+        <EditText
+            android:id="@+id/ed_user_support"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="10dp"
+            android:hint="Football team user support "
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ed_password"
+            app:layout_constraintTop_toBottomOf="@+id/ed_password" />
+
+        <EditText
+            android:id="@+id/ed_pref_play_position"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Preferred Position of Play"
+            android:drawableStart="@drawable/grey_player_icon"
+            android:drawableLeft="@drawable/grey_player_icon"
+            android:paddingTop="10dp"
+            android:drawablePadding="5dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ed_user_support"
+            app:layout_constraintTop_toBottomOf="@+id/ed_user_support" />
+
+
+        <EditText
+            android:id="@+id/ed_emerg_contact"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Emergency Contact Name"
+            android:paddingTop="10dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ed_pref_play_position"
+            app:layout_constraintTop_toBottomOf="@+id/ed_pref_play_position" />
+
+
+        <EditText
+            android:id="@+id/ed_emerg_contact_num"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Emergency Contact Number"
+            android:paddingTop="10dp"
+            android:drawableStart="@drawable/telephone_icon_new"
+            android:drawableLeft="@drawable/telephone_icon_new"
+            android:drawablePadding="5dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ed_emerg_contact"
+            app:layout_constraintTop_toBottomOf="@+id/ed_emerg_contact" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/login_btn_background"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_emerg_contact_num" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GroupDetailActivity">
+
+    <com.firmground.evs.firmground.circle_image.CircleImageView
+        android:id="@+id/img_group_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circle_border_simple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    <TextView
+        android:id="@+id/tv_label_edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Edit Name:"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_group_icon"
+        />
+
+    <TextView
+        android:id="@+id/ed_group_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="22sp"
+        android:focusable="false"
+        android:hint="Group name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_edit_name" />
+
+    <!-- <TextView
+         android:id="@+id/tv_label_change_match_status"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="8dp"
+         android:layout_marginLeft="8dp"
+         android:layout_marginTop="8dp"
+         android:text="Change Status:"
+         android:textColor="@android:color/black"
+         android:textSize="22sp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/ed_group_name" />
+
+     <RadioGroup
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         app:layout_constraintBottom_toBottomOf="@+id/tv_completed"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/tv_schedule"
+         app:layout_constraintTop_toTopOf="@+id/tv_schedule">
+
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="28dp"
+             android:id="@+id/radioButton1"
+             android:layout_gravity="center_horizontal"
+             android:checked="false"
+             />
+
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="28dp"
+             android:text=""
+             android:id="@+id/radioButton2"
+             android:layout_gravity="center_horizontal"
+             android:checked="false"
+             />
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="28dp"
+             android:text=""
+             android:id="@+id/radioButton3"
+             android:layout_gravity="center_horizontal"
+             android:checked="false"
+             />
+
+     </RadioGroup>
+
+     <TextView
+         android:id="@+id/tv_schedule"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="20dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="40dp"
+         android:layout_marginRight="4dp"
+         android:text="Schedule"
+         android:textColor="@android:color/black"
+         android:textSize="17sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tv_label_change_match_status" />
+
+     <TextView
+         android:id="@+id/tv_reschedule"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="20dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="40dp"
+         android:layout_marginRight="40dp"
+         android:text="Reschedule"
+         android:textColor="@android:color/black"
+         android:textSize="17sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tv_schedule" />
+
+     <TextView
+         android:id="@+id/tv_completed"
+         android:layout_width="match_parent"
+         android:layout_height="22dp"
+         android:layout_marginStart="20dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="40dp"
+         android:layout_marginRight="40dp"
+         android:text="Complete"
+         android:textColor="@android:color/black"
+         android:textSize="17sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="1.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tv_reschedule"
+         />
+ -->
+    <TextView
+        android:id="@+id/tv_label_update_participants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Group Members"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_group_name"
+        />
+
+    <ImageView
+        android:id="@+id/img_add_participant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_update_participants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_update_participants"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_update_participants" />
+
+
+    <Button
+        android:id="@+id/btn_update_group"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Leave Group"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

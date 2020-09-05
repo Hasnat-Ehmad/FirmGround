@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_message_black_24dp"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_groups"
+        android:icon="@drawable/ic_group_black_24dp"
+        android:title="" />
+
+   <!-- <item
+        android:id="@+id/navigation_list"
+        android:icon="@drawable/ic_subtitles_black_24dp"
+        android:title="" />-->
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/ic_more_black_24dp"
+        android:title="" />
+</menu>

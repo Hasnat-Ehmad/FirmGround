@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contact_view"
+    android:layout_margin="6dp"
+    android:weightSum="7"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.firmground.evs.firmground.circle_image.CircleImageView
+        android:id="@+id/item_image"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:padding="5dp"
+        android:layout_weight="2"
+        android:contentDescription="TODO"
+        />
+        <!--android:src="@drawable/default_person"-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <CheckedTextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            />
+
+        <CheckedTextView
+            android:id="@+id/tv_role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="dummy"
+            android:textColor="@color/grey_"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_set_admin"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:text="Set Admin"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        />
+        />
+
+    <ImageView
+        android:id="@+id/img_cross"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+</LinearLayout>
